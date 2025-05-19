@@ -1,0 +1,178 @@
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background-color: #f4f4f7; /* Subtle off-white background */
+  color: #333;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  color: #1d1d1f; /* Darker gray for headings */
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+h2 {
+  color: #636366; /* Soft gray for secondary text */
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+input {
+  padding: 16px 24px;
+  font-size: 1.2rem;
+  border: 2px solid #e1e4e8; /* Soft border */
+  border-radius: 12px;
+  background-color: #fff;
+  width: 300px;
+  margin-right: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #0071e3; /* Apple blue on focus */
+  box-shadow: 0 0 0 2px rgba(0, 113, 227, 0.3);
+}
+
+button {
+  padding: 16px 24px;
+  cursor: pointer;
+  background-color: #0071e3; /* Apple blue */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  outline: none;
+}
+
+button:hover {
+  background-color: #005bb5; /* Darker blue on hover */
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #003d81; /* Even darker blue on click */
+}
+
+.weather-info,
+.recipe-info {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.recipes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.recipe-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-8px); /* Slight lift effect */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+}
+
+.recipe-title {
+  font-size: 1.8rem;
+  color: #1d1d1f;
+  font-weight: 500;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.recipe-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.recipe-actions a {
+  padding: 12px 20px;
+  background-color: #0071e3;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.recipe-actions a:hover {
+  background-color: #005bb5; /* Hover effect on links */
+}
+
+.loading {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.input-container button {
+  margin-left: 15px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  input {
+    width: 250px;
+  }
+
+  .recipes-container {
+    grid-template-columns: 1fr;
+  }
+
+  button {
+    width: 100%;
+  }
+}
